@@ -1,0 +1,5 @@
+This is a project aimed to give a teacher the ability to choose a random Latin verb, person, number, voice, and mood in order to help with student synopses. It is written in Objective-C with Cocoa as a native Mac application.
+
+This software is released under the GPL "as-is" without any warranty.
+Copyright (C) 2011 by Eric Bakan.
+
