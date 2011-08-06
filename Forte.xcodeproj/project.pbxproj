@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B2FA9A413EDE4CA005845D6 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3B2FA9A313EDE4CA005845D6 /* words.txt */; };
+		3B4208E013ECA84000F55F14 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4208DF13ECA84000F55F14 /* Cocoa.framework */; };
+		3B4208EA13ECA84000F55F14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B4208E813ECA84000F55F14 /* InfoPlist.strings */; };
+		3B4208EC13ECA84000F55F14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4208EB13ECA84000F55F14 /* main.m */; };
+		3B4208F013ECA84100F55F14 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3B4208EE13ECA84100F55F14 /* Credits.rtf */; };
+		3B4208F313ECA84100F55F14 /* ForteAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4208F213ECA84100F55F14 /* ForteAppDelegate.m */; };
+		3B4208F613ECA84100F55F14 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B4208F413ECA84100F55F14 /* MainMenu.xib */; };
+		3B4208FE13ECAE7500F55F14 /* WordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4208FD13ECAE7500F55F14 /* WordList.m */; };
+		3B42090813ECCB2500F55F14 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B42090713ECCB2500F55F14 /* Word.m */; };
+		3B42090C13ECD48B00F55F14 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B42090B13ECD48B00F55F14 /* Controller.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B2FA9A213ECE614005845D6 /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Options.h; sourceTree = "<group>"; };
+		3B2FA9A313EDE4CA005845D6 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		3B4208DB13ECA84000F55F14 /* Forte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4208DF13ECA84000F55F14 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3B4208E213ECA84000F55F14 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3B4208E313ECA84000F55F14 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3B4208E413ECA84000F55F14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B4208E713ECA84000F55F14 /* Forte-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Forte-Info.plist"; sourceTree = "<group>"; };
+		3B4208E913ECA84000F55F14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B4208EB13ECA84000F55F14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B4208ED13ECA84100F55F14 /* Forte-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Forte-Prefix.pch"; sourceTree = "<group>"; };
+		3B4208EF13ECA84100F55F14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3B4208F113ECA84100F55F14 /* ForteAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForteAppDelegate.h; sourceTree = "<group>"; };
+		3B4208F213ECA84100F55F14 /* ForteAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForteAppDelegate.m; sourceTree = "<group>"; };
+		3B4208F513ECA84100F55F14 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3B4208FC13ECAE7500F55F14 /* WordList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordList.h; sourceTree = "<group>"; };
+		3B4208FD13ECAE7500F55F14 /* WordList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordList.m; sourceTree = "<group>"; };
+		3B42090613ECCB2500F55F14 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		3B42090713ECCB2500F55F14 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		3B42090A13ECD48B00F55F14 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		3B42090B13ECD48B00F55F14 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B4208D813ECA84000F55F14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4208E013ECA84000F55F14 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B4208D013ECA84000F55F14 = {
+			isa = PBXGroup;
+			children = (
+				3B4208E513ECA84000F55F14 /* Forte */,
+				3B4208DE13ECA84000F55F14 /* Frameworks */,
+				3B4208DC13ECA84000F55F14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B4208DC13ECA84000F55F14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B4208DB13ECA84000F55F14 /* Forte.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B4208DE13ECA84000F55F14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B4208DF13ECA84000F55F14 /* Cocoa.framework */,
+				3B4208E113ECA84000F55F14 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B4208E113ECA84000F55F14 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B4208E213ECA84000F55F14 /* AppKit.framework */,
+				3B4208E313ECA84000F55F14 /* CoreData.framework */,
+				3B4208E413ECA84000F55F14 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3B4208E513ECA84000F55F14 /* Forte */ = {
+			isa = PBXGroup;
+			children = (
+				3B4208F113ECA84100F55F14 /* ForteAppDelegate.h */,
+				3B4208F213ECA84100F55F14 /* ForteAppDelegate.m */,
+				3B2FA9A213ECE614005845D6 /* Options.h */,
+				3B42090A13ECD48B00F55F14 /* Controller.h */,
+				3B42090B13ECD48B00F55F14 /* Controller.m */,
+				3B4208F413ECA84100F55F14 /* MainMenu.xib */,
+				3B4208FC13ECAE7500F55F14 /* WordList.h */,
+				3B4208FD13ECAE7500F55F14 /* WordList.m */,
+				3B42090613ECCB2500F55F14 /* Word.h */,
+				3B42090713ECCB2500F55F14 /* Word.m */,
+				3B4208E613ECA84000F55F14 /* Supporting Files */,
+			);
+			path = Forte;
+			sourceTree = "<group>";
+		};
+		3B4208E613ECA84000F55F14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B2FA9A313EDE4CA005845D6 /* words.txt */,
+				3B4208E713ECA84000F55F14 /* Forte-Info.plist */,
+				3B4208E813ECA84000F55F14 /* InfoPlist.strings */,
+				3B4208EB13ECA84000F55F14 /* main.m */,
+				3B4208ED13ECA84100F55F14 /* Forte-Prefix.pch */,
+				3B4208EE13ECA84100F55F14 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B4208DA13ECA84000F55F14 /* Forte */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4208F913ECA84100F55F14 /* Build configuration list for PBXNativeTarget "Forte" */;
+			buildPhases = (
+				3B4208D713ECA84000F55F14 /* Sources */,
+				3B4208D813ECA84000F55F14 /* Frameworks */,
+				3B4208D913ECA84000F55F14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Forte;
+			productName = Forte;
+			productReference = 3B4208DB13ECA84000F55F14 /* Forte.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B4208D213ECA84000F55F14 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 3B4208D513ECA84000F55F14 /* Build configuration list for PBXProject "Forte" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B4208D013ECA84000F55F14;
+			productRefGroup = 3B4208DC13ECA84000F55F14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B4208DA13ECA84000F55F14 /* Forte */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B4208D913ECA84000F55F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4208EA13ECA84000F55F14 /* InfoPlist.strings in Resources */,
+				3B4208F013ECA84100F55F14 /* Credits.rtf in Resources */,
+				3B4208F613ECA84100F55F14 /* MainMenu.xib in Resources */,
+				3B2FA9A413EDE4CA005845D6 /* words.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B4208D713ECA84000F55F14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4208EC13ECA84000F55F14 /* main.m in Sources */,
+				3B4208F313ECA84100F55F14 /* ForteAppDelegate.m in Sources */,
+				3B4208FE13ECAE7500F55F14 /* WordList.m in Sources */,
+				3B42090813ECCB2500F55F14 /* Word.m in Sources */,
+				3B42090C13ECD48B00F55F14 /* Controller.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B4208E813ECA84000F55F14 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4208E913ECA84000F55F14 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B4208EE13ECA84100F55F14 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4208EF13ECA84100F55F14 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3B4208F413ECA84100F55F14 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4208F513ECA84100F55F14 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B4208F713ECA84100F55F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3B4208F813ECA84100F55F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3B4208FA13ECA84100F55F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Forte/Forte-Prefix.pch";
+				INFOPLIST_FILE = "Forte/Forte-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B4208FB13ECA84100F55F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Forte/Forte-Prefix.pch";
+				INFOPLIST_FILE = "Forte/Forte-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B4208D513ECA84000F55F14 /* Build configuration list for PBXProject "Forte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4208F713ECA84100F55F14 /* Debug */,
+				3B4208F813ECA84100F55F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B4208F913ECA84100F55F14 /* Build configuration list for PBXNativeTarget "Forte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4208FA13ECA84100F55F14 /* Debug */,
+				3B4208FB13ECA84100F55F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B4208D213ECA84000F55F14 /* Project object */;
+}
