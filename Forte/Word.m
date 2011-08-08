@@ -1,22 +1,31 @@
-//
-//  Word.m
-//  Forte
-//
-//  Created by ebakan on 8/5/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/*
+ *  Word.m
+ *  Copyright (C) 2011 Eric Bakan
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 
 #import "Word.h"
 
 @implementation Word
-@synthesize properties, decl, dep;
+@synthesize first, second, third, fourth, def, declstr, pparts, decl, dep;
 -(id) initWithString: (NSString *) string
 {
     [self init];
     if(!self)
         return self;
-    
-    properties=[[NSMutableDictionary alloc] init];
     
     NSArray* elements=[string componentsSeparatedByString:@"\t"];
     /*
@@ -24,114 +33,117 @@
     for(NSString* str in elements)
         NSLog(@"%@\n",str);
      */
+    first=[elements objectAtIndex:0];
+    second=[elements objectAtIndex:1];
+    third=[elements objectAtIndex:2];
+    fourth=[elements objectAtIndex:3];
+    def=[elements objectAtIndex:5];
+    declstr=[elements objectAtIndex:4];
     
-    [properties setObject:[[elements objectAtIndex:0] copy] forKey:@"first"];
-    [properties setObject:[[elements objectAtIndex:1] copy] forKey:@"second"];
-    [properties setObject:[[elements objectAtIndex:2] copy] forKey:@"third"];
-    [properties setObject:[[elements objectAtIndex:3] copy] forKey:@"fourth"];
-    [properties setObject:[[elements objectAtIndex:5] copy] forKey:@"def"];
-
-    
-    NSString* declension=[elements objectAtIndex:4];
-    if([declension compare:@"irr"]==NSOrderedSame) {
+    if([declstr compare:@"irr"]==NSOrderedSame) {
         decl=IRREGULAR;
         dep=STANDARD;
     }
-    else if([declension compare:@"1"]==NSOrderedSame) {
+    else if([declstr compare:@"1"]==NSOrderedSame) {
         decl=FIRST;
         dep=STANDARD;
     }
-    else if([declension compare:@"1d"]==NSOrderedSame) {
+    else if([declstr compare:@"1d"]==NSOrderedSame) {
         decl=FIRST;
         dep=DEPONENT;
     }
-    else if([declension compare:@"1sd"]==NSOrderedSame) {
+    else if([declstr compare:@"1sd"]==NSOrderedSame) {
         decl=FIRST;
         dep=SEMI_DEPONENT;
     }
-    else if([declension compare:@"2"]==NSOrderedSame) {
+    else if([declstr compare:@"2"]==NSOrderedSame) {
         decl=SECOND;
         dep=STANDARD;
     }
-    else if([declension compare:@"2d"]==NSOrderedSame) {
+    else if([declstr compare:@"2d"]==NSOrderedSame) {
         decl=SECOND;
         dep=DEPONENT;
     }
-    else if([declension compare:@"2sd"]==NSOrderedSame) {
+    else if([declstr compare:@"2sd"]==NSOrderedSame) {
         decl=SECOND;
         dep=SEMI_DEPONENT;
     }
-    else if([declension compare:@"3"]==NSOrderedSame) {
+    else if([declstr compare:@"3"]==NSOrderedSame) {
         decl=THIRD;
         dep=STANDARD;
     }
-    else if([declension compare:@"3d"]==NSOrderedSame) {
+    else if([declstr compare:@"3d"]==NSOrderedSame) {
         decl=THIRD;
         dep=DEPONENT;
     }
-    else if([declension compare:@"3sd"]==NSOrderedSame) {
+    else if([declstr compare:@"3sd"]==NSOrderedSame) {
         decl=THIRD;
         dep=SEMI_DEPONENT;
     }
-    else if([declension compare:@"3io"]==NSOrderedSame) {
+    else if([declstr compare:@"3io"]==NSOrderedSame) {
         decl=THIRD_IO;
         dep=STANDARD;
     }
-    else if([declension compare:@"3iod"]==NSOrderedSame) {
+    else if([declstr compare:@"3iod"]==NSOrderedSame) {
         decl=THIRD_IO;
         dep=DEPONENT;
     }
-    else if([declension compare:@"3iosd"]==NSOrderedSame) {
+    else if([declstr compare:@"3iosd"]==NSOrderedSame) {
         decl=THIRD_IO;
         dep=SEMI_DEPONENT;
     }
-    else if([declension compare:@"4"]==NSOrderedSame) {
+    else if([declstr compare:@"4"]==NSOrderedSame) {
         decl=FOURTH;
         dep=STANDARD;
     }
-    else if([declension compare:@"4d"]==NSOrderedSame) {
+    else if([declstr compare:@"4d"]==NSOrderedSame) {
         decl=FOURTH;
         dep=DEPONENT;
     }
-    else if([declension compare:@"4sd"]==NSOrderedSame) {
+    else if([declstr compare:@"4sd"]==NSOrderedSame) {
         decl=FOURTH;
         dep=SEMI_DEPONENT;
     }
     switch(decl) {
         case FIRST:
-            [properties setObject:@"1st" forKey:@"declension"];
+            declstr=@"1st";
             break;
         case SECOND:
-            [properties setObject:@"2nd" forKey:@"declension"];
+            declstr=@"2nd";
             break;
         case THIRD:
-            [properties setObject:@"3rd" forKey:@"declension"];
+            declstr=@"3rd";
             break;
         case THIRD_IO:
-            [properties setObject:@"3rd-io" forKey:@"declension"];
+            declstr=@"3rd-io";
             break;
         case FOURTH:
-            [properties setObject:@"4th" forKey:@"declension"];
+            declstr=@"4th";
             break;
         case IRREGULAR:
-            [properties setObject:@"Irregular" forKey:@"declension"];
+            declstr=@"Irregular";
             break;
         default:
-            [properties setObject:NULL forKey:@"declension"];
+            declstr=nil;
             break;
     }
     if(dep==DEPONENT) {
-        NSMutableString* old=[[NSMutableString alloc] initWithString:[properties objectForKey:@"declension"]];
-        [old appendString:@" Deponent"];
-        [properties setObject:old forKey:@"declension"];
+        declstr=[NSString stringWithFormat:@"%@ %@",declstr,@"Deponent"];
     }
     else if(dep==SEMI_DEPONENT) {
-        NSMutableString* old=[[NSMutableString alloc] initWithString:[properties objectForKey:@"declension"]];
-        [old appendString:@" Semi-Deponent"];
-        [properties setObject:old forKey:@"declension"];
+        declstr=[NSString stringWithFormat:@"%@ %@",declstr,@"Semi-Deponent"];
     }
     
-    [properties setObject:[NSString stringWithFormat:@"%@, %@, %@, %@",[properties objectForKey:@"first"],[properties objectForKey:@"second"],[properties objectForKey:@"third"],[properties objectForKey:@"fourth"]] forKey:@"pparts"];
+    pparts=[NSString stringWithFormat:@"%@, %@, %@, %@",first,second,third,fourth];
+    
+    [first retain];
+    [second retain];
+    [third retain];
+    [fourth retain];
+    [def retain];
+    [declstr retain];
+    [pparts retain];
+     
     
     return self;
 }
@@ -179,7 +191,13 @@
 
 -(void) dealloc
 {
-    [properties release];
+    [first release];
+    [second release];
+    [third release];
+    [fourth release];
+    [def release];
+    [declstr release];
+    [pparts release];
     [super dealloc];
 }
 

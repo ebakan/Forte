@@ -1,10 +1,21 @@
-//
-//  Word.h
-//  Forte
-//
-//  Created by ebakan on 8/5/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/*
+ *  Word.h
+ *  Copyright (C) 2011 Eric Bakan
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 
 #import <Foundation/Foundation.h>
 #import "Options.h"
@@ -27,9 +38,15 @@ enum deponence {
 @interface Word : NSObject
 {
 }
-@property (readonly) NSMutableDictionary* properties;
-@property (readonly) enum declension decl;
-@property (readonly) enum deponence dep;
+@property (readwrite,copy) NSString* first;
+@property (readwrite,copy) NSString* second;
+@property (readwrite,copy) NSString* third;
+@property (readwrite,copy) NSString* fourth;
+@property (readwrite,copy) NSString* def;
+@property (readwrite,copy) NSString* pparts;
+@property (readwrite,copy) NSString* declstr;
+@property enum declension decl;
+@property enum deponence dep;
 -(id) initWithString: (NSString *) string;
 -(BOOL) isValid:(options) options;
 @end

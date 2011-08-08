@@ -1,10 +1,21 @@
-//
-//  Controller.m
-//  Forte
-//
-//  Created by ebakan on 8/5/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/*
+ *  Controller.m
+ *  Copyright (C) 2011 Eric Bakan
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 
 #import "Controller.h"
 
@@ -15,9 +26,9 @@
     self = [super init];
     if (!self)
         return self;
-    system("pwd");
-    wordlist=[[WordList alloc] initWithFile:@"Forte.app/Contents/Resources/words.txt"];
-    validwordlist=[wordlist getValidWords:[self getOptions]];
+    wordlist=[[WordList alloc] initWithFile:[[NSBundle mainBundle] pathForResource:@"words.txt" ofType:nil]];
+    
+    validwordlist=wordlist.wordArray;
     [validwordlist retain];
     return self;
 }
@@ -34,6 +45,8 @@
     [text_number setSelectable:YES];
     [text_voice setSelectable:YES];
     [text_mood setSelectable:YES];
+    [wordController setSelectsInsertedObjects:NO];
+    [self updateList:self];
 }
 
 -(options)getOptions
@@ -81,8 +94,12 @@
 
 -(IBAction)updateList:(id)sender
 {
+    NSArray* newwords=[wordlist getValidWords:[self getOptions]];
+    [wordController removeObjects:validwordlist];
+    [wordController addObjects:newwords];
+    
     [validwordlist release];
-    validwordlist=[wordlist getValidWords:[self getOptions]];
+    validwordlist=newwords;
     [validwordlist retain];
 }
 
@@ -98,7 +115,8 @@
     }
     NSUInteger pos=random()%[validwordlist count];
     Word* word=[validwordlist objectAtIndex:pos];
-    [text_word setStringValue:[NSString stringWithFormat:@"%@\n%@",[word.properties objectForKey:@"pparts"],[word.properties objectForKey:@"def"]]];
+    NSString* tmp=[NSString stringWithFormat:@"%@\n%@",word.pparts,word.def];
+    [text_word setStringValue:tmp];
     //person
     switch(random()%3) {
         case 0:
@@ -129,7 +147,7 @@
     else if(word.dep==SEMI_DEPONENT) {
         [text_voice setStringValue:@"Semi-Deponent"];
     }
-    else if([[word.properties objectForKey:@"fourth"] isEqualToString:@"—"]) {
+    else if([word.fourth isEqualToString:@"—"]) {
         [text_voice setStringValue:@"No Passsive"];
     }
     else {
