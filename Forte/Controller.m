@@ -39,12 +39,10 @@
     [text_person setStringValue:@""];
     [text_number setStringValue:@""];
     [text_voice setStringValue:@""];
-    [text_mood setStringValue:@""];
     [text_word setSelectable:YES];
     [text_person setSelectable:YES];
     [text_number setSelectable:YES];
     [text_voice setSelectable:YES];
-    [text_mood setSelectable:YES];
     [wordController setSelectsInsertedObjects:NO];
     [self updateList:self];
 }
@@ -159,16 +157,6 @@
                 [text_voice setStringValue:@"Passive"];
                 break;
         }
-    }
-    
-    //mood
-    switch(random()%2) {
-        case 0:
-            [text_mood setStringValue:@"Indicative"];
-            break;
-        case 1:
-            [text_mood setStringValue:@"Deponent"];
-            break;
     }
 }
 

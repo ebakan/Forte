@@ -39,7 +39,6 @@
     IBOutlet id text_person;
     IBOutlet id text_number;
     IBOutlet id text_voice;
-    IBOutlet id text_mood;
     IBOutlet NSArrayController* wordController;
     
     WordList* wordlist;

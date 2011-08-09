@@ -1,0 +1,1 @@
+DerivedData/Forte/Build/Products/Debug/Forte.app/
